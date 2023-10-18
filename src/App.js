@@ -58,8 +58,8 @@ function App() {
       <AppInput onSubmit={handleNewTodo} />
 
       <div>
-        <p>{todoList.length == 0 && "No items in the list"}</p>
         <ul className="todoList">
+          <p>{todoList.length == 0 && "No items in the list"}</p>
           {todoList.map((todo) => {
             return (
               <li

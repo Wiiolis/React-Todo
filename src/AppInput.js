@@ -5,7 +5,13 @@ export default function AppInput({ handleInput, onSubmit }) {
   const [newTodo, setNewTodo] = useState("");
 
   function handleSubmit(e) {
-    onSubmit(newTodo);
+    e.preventDefault();
+
+    if (newTodo != "") {
+      onSubmit(newTodo);
+    }
+
+    setNewTodo("");
   }
 
   return (
@@ -13,7 +19,7 @@ export default function AppInput({ handleInput, onSubmit }) {
       <p className="titleTodo">Daily Planner</p>
 
       <div className="inputHeader">
-        <input onChange={(e) => setNewTodo(e.target.value)} />
+        <input onChange={(e) => setNewTodo(e.target.value)} value={newTodo} />
         <button onClick={handleSubmit}>Submit</button>
       </div>
     </>
