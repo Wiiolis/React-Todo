@@ -1,38 +1,102 @@
+html, body {
+  background-color: darkslategray;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .App {
   text-align: center;
+  width: 300px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  border: none;
+  padding: 5px 10px;
+  flex: 1
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type='checkbox'] {
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputHeader {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+p {
+  margin: 0;
+}
+
+.clearButton {
+  margin-top: 50px;
+  background-color: transparent;
+  border: 1px solid lightseagreen;
+  color: lightseagreen;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  transition: 0.3s ease all;
+}
+
+.clearButton:hover {
+  background-color: lightseagreen;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.deleteButton {
+  background-color: transparent;
+  border: 1px solid rgb(191, 79, 79);
+  color: rgb(191, 79, 79);
+  cursor: pointer;
+  width: 65px;
+  padding: 5px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titleTodo {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.day {
+  font-size: 20px;
+}
+
+.todoList {
+  padding: 0;
+  margin-top: 20px;
+}
+
+.time {
+  color: rgb(184, 228, 226);
+  font-size: 50px;
+  margin: 5px 0 60px;
+}
+
+.listItemActive {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: rgb(48, 112, 112)
+}
+
+button {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  width: 65px;
 }
